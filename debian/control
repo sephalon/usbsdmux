@@ -1,0 +1,16 @@
+Source: usbsdmux
+Section: electronics
+Priority: optional
+Maintainer: Stefan Wiehler <stefan.wiehler@missinglinkelectronics.com>
+Build-Depends: debhelper (>=9), dh-python, python3-all, python3-setuptools
+Standards-Version: 3.9.8
+Homepage: https://github.com/pengutronix/usbsdmux
+X-Python3-Version: >= 3.2
+
+Package: usbsdmux
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: USB-SD-Mux host control software
+ Control an USB-SD-Mux hardware device, which multiplexes a microSD card
+ between a host and a device under test (DUT).
