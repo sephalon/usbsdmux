@@ -1,0 +1,22 @@
+From: Stefan Wiehler <stefan.wiehler@missinglinkelectronics.com>
+Date: Tue, 19 Nov 2019 09:20:35 +0100
+Subject: Set usbsdmux-service path in systemd service
+
+Signed-off-by: Stefan Wiehler <stefan.wiehler@missinglinkelectronics.com>
+---
+ contrib/systemd/usbsdmux.service | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/contrib/systemd/usbsdmux.service b/contrib/systemd/usbsdmux.service
+index 3c2d627..bb07924 100644
+--- a/contrib/systemd/usbsdmux.service
++++ b/contrib/systemd/usbsdmux.service
+@@ -5,7 +5,7 @@ Requires=usbsdmux.socket
+ 
+ [Service]
+ Type=simple
+-ExecStart=/path/to/usb-sd-mux/.venv/bin/usbsdmux-service
++ExecStart=/usr/bin/usbsdmux-service
+ 
+ [Install]
+ WantedBy=multi-user.target
